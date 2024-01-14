@@ -1,6 +1,7 @@
 import { getTasks } from "@/actions/task.actions";
 import CreateButton from "@/components/create_button";
 import List from "@/components/list";
+import Logout from "@/components/logout";
 import React from "react";
 
 export default async function Page() {
@@ -8,6 +9,7 @@ export default async function Page() {
 
   return (
     <div>
+      <Logout />
       <CreateButton />
       {tasks?.map((task) => (
         <List
